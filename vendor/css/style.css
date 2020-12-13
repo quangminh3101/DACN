@@ -1,0 +1,244 @@
+.nav-item.active {
+	position: relative;
+	font-weight: 500;
+
+}
+.nav-item.active::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	background-color: #f00;
+	bottom: 0;
+	left: 0;
+}
+
+.navbar-logo {
+	background: linear-gradient(90deg, rgba(243, 72, 104,1) 20.5625%,rgba(242, 71, 104,1) 20.5625%,rgba(158, 0, 236,1) 80.5625%);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	margin-right: 15px;
+	font-size: 28px;
+	user-select: none;
+	cursor: pointer;
+}
+
+.form-login {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #00000050;
+	z-index: 10;
+	opacity: 0;
+	visibility: hidden;
+	transition: linear .3s;
+}
+
+.form-login.active {
+	opacity: 1;
+	visibility: unset;
+	transition: linear .3s;
+}
+
+.form-login .form-body {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 300px;
+	background-color: #fff;
+	padding: 30px 40px;
+}
+
+#form-change-pass .message-error,
+#form-login .message-error {
+	color: #ff0000;
+	font-size: 14px;
+	font-weight: 400;
+}
+#form-login .form-row label {pointer-events: none;}
+
+.md-form {
+    position: relative;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem
+}
+
+.button-submit {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.button-submit button {
+	font-size: 14px !important;
+	font-weight: 500;
+}
+
+a.download-file-name:hover {
+	color: #FF3547 !important;
+}
+
+.form-control ~ label {
+  cursor: unset;
+}
+
+.message-modal {
+  position: fixed;
+  width: 250px;
+  min-height: 0;
+  top: 58px;
+  right: 10px;
+  background-color: transparent;
+  z-index: 100;
+  -webkit-tap-highlight-color: transparent;
+}
+.message-modal .msg-body {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: relative;
+  opacity: 1;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+.message-modal .msg-body::before {
+  content: 'x';
+  position: absolute;
+  top: 0;
+  right: 7px;
+  color: #fff;
+}
+.message-modal .msg-body.success {
+  background-color: #2ecc71;
+}
+.message-modal .msg-body.info {
+  background-color: #2973D7;
+}
+.message-modal .msg-body.waring {
+  background-color: #FFB22B;
+}
+.message-modal .msg-body.danger {
+  background-color: #EF5350;
+}
+.message-modal .msg-body.hidden {
+  opacity: .5;
+  -webkit-animation: hiddenHeight linear .3s;
+          animation: hiddenHeight linear .3s;
+}
+@-webkit-keyframes hiddenHeight {
+  from {
+    height: var(--height-max);
+  }
+  to {
+    height: 0;
+  }
+}
+@keyframes hiddenHeight {
+  from {
+    height: var(--height-max);
+  }
+  to {
+    height: 0;
+  }
+}
+.message-modal .msg-body .timeout {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: red;
+  z-index: 1;
+}
+@-webkit-keyframes hidden {
+  from {
+    width: 100%;
+  }
+  to {
+    widows: 0%;
+  }
+}
+@keyframes hidden {
+  from {
+    width: 100%;
+  }
+  to {
+    widows: 0%;
+  }
+}
+.message-modal .msg-body .img-icon {
+  width: 50px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0px 5px;
+}
+.message-modal .msg-body .img-icon svg {
+  width: 30px;
+  height: 30px;
+  fill: #fff;
+  color: #fff;
+  -webkit-animation: scaleMsgModal linear .2s;
+          animation: scaleMsgModal linear .2s;
+  font-size: 5px;
+}
+@-webkit-keyframes scaleMsgModal {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes scaleMsgModal {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+.message-modal .msg-body .body-main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 3px 10px 7px 0px;
+  color: #fff;
+}
+.message-modal .msg-body .body-main .main-title {
+  font-weight: 400;
+  font-size: 16px;
+}
+.message-modal .msg-body .body-main .main-content {
+  font-weight: 300;
+  font-size: 15px;
+}
+
+
+@media (max-width: 992px) {
+    .dropdown-menu-right.custom-dropdown {
+        right: 0;
+        left: 0;
+    }
+}
